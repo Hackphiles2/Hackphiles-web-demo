@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <link
+    rel="stylesheet"
+    href="//use.fontawesome.com/releases/v5.0.7/css/all.css"/>
+    <title>Web designing</title>
+</head>
+<body>
+    <header class="header" id="header">
+        <h1 id="logo">Hack<span>philes</span></h1>
+        <ul class="nav-items" id="nav-items">
+            <li>
+                <a href="#" onclick="navClose()">Home</a>
+            </li>
+            <li>
+                <a href="#card-section" onclick="navClose()">Card</a>
+            </li>
+            <li>
+                <a onclick="navClose()" href="https://www.youtube.com/channel/UCaPRgaGx5c5xod5MMnUkvfA">Youtube</a>
+            </li>
+            <li>
+                <a href="#footer" onclick="navClose()">Footer</a>
+            </li>
+        </ul>
+        <div class="burger-menu" onclick="navSlide()">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </header>
+    <main class="land-screen">
+        <h1>Welcome to hackphiles</h1>
+        <p>This website is a demo.</p>
+        <a href="https://www.youtube.com/channel/UCaPRgaGx5c5xod5MMnUkvfA" class="get-started">Get Started 
+            <i class="fas fa-play"></i>
+        </a>
+    </main>
+    <section id="card-section">
+        <h1 class="card-section-header">Card Section</h1>
+        <div class="cards-container">
+            <div class="card">
+                <img class="card-image" src="/images/atom.png" alt="">
+                <h6>Atom</h6>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae et animi vero ipsum ullam commodi recusandae explicabo illo? Amet, iure!</p>
+            </div>
+            <div class="card">
+                <img class="card-image" src="/images/atom.png" alt="">
+                <h6>Atom</h6>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae et animi vero ipsum ullam commodi recusandae explicabo illo? Amet, iure!</p>
+            </div>
+            <div class="card">
+                <img class="card-image" src="/images/atom.png" alt="">
+                <h6>Atom</h6>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae et animi vero ipsum ullam commodi recusandae explicabo illo? Amet, iure!</p>
+            </div>
+            <div class="card">
+                <img class="card-image" src="/images/atom.png" alt="">
+                <h6>Atom</h6>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae et animi vero ipsum ullam commodi recusandae explicabo illo? Amet, iure!</p>
+            </div>
+        </div>
+    </section>
+    <footer id="footer">
+        <h1>Thank You!</h1>
+    </footer>
+</body>
+<script>
+    function navSlide(){
+        var navItems = document.getElementById("nav-items")
+        navItems.classList.toggle("nav-items--active")
+    }
+    function navClose(){
+        var navActive = document.getElementsByClassName("nav-items--active")
+        if(navActive[0]){
+            navActive[0].classList.toggle("nav-items--active")
+        }
+    }
+</script>
+</html>
